@@ -10,7 +10,7 @@ let lines = [];
 //wind
 let x = [];
 let y = [];
-let beefly = 10
+let beeFly =10
 let beeColor = "yellow"; 
 // Initial color of the bee
 let speedX = 0;
@@ -137,11 +137,11 @@ function draw() {
   move();
     fill(0);
   textAlign(CENTER);
-  textSize(16);
-  text('Press "w" to jump one bee and "x" to jump with the other bee', width/2, height - 20);
+  textSize(20);
+  text('Press "w" to fly with bee1 Press "x" to fly with bee2', width/2, height - 20);
           fill(0);
   textAlign(CENTER);
-  textSize(16);
+  textSize(20);
   text('Press "b" to change bees to black  Press"y" to change bees to yellow', width/2, height - 40);
 
 }
@@ -188,10 +188,10 @@ function move() {
     x[1] = width * noise(frameCount * 0.005);
     y[1] = height * noise(frameCount * 0.01);
 if (keyIsPressed && key === 'w') {
-    y[0] -= 10;
+    y[0] -= beeFly;
   }
   if (keyIsPressed && key === 'x') {
-    y[1] -= 10;
+    y[1] -= beeFly;
   }
   }console.log(y[0])
 
